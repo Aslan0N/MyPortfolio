@@ -1,0 +1,204 @@
+#home {
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/home.svg") center/cover no-repeat;
+  .owerlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    background-color: #1e2128;
+    ul{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      li{
+        width: 30%;
+        text-align: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+          margin-right: 30px;
+          color: #14e956;
+          font-size: 70px;
+          opacity: 0;
+        }
+        &:hover{
+          span{
+            opacity: 1;
+          }
+        }
+        a{
+          color: #14e956;
+          text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
+          font-size: 60px;
+          font-weight: 900;
+        }
+      }
+      
+    }
+  }
+  .visible{
+    z-index: 999 !important;
+  }
+  &::after {
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  .container {
+    position: relative;
+    z-index: 3;
+    .row {
+      .col-12 {
+        color: #fff;
+        padding: 15px 0;
+        img {
+          width: 100%;
+          height: 70%;
+        }
+        .first-p {
+          cursor: url("https://www.onyedika.xyz/static/media/arrowClick.7219a884818048edacbe.svg")
+              15 15,
+          move !important;
+          font-size: 18px;
+          color: #14e956;
+          border-radius: 10px;
+          padding: 0.8rem 1rem;
+          display: inline-block;
+          background: rgba(20, 233, 88, 0.157);
+          span {
+            animation: wobbie 2s infinite !important;
+            display: inline-block;
+          }
+        }
+        h1 {
+          font-weight: 900;
+          font-size: 35px;
+          margin: 25px 0;
+          span {
+            font-size: 37px;
+            color: #14e956;
+            text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
+
+          }
+        }
+        .end-p {
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+      .img-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeInRight 2s ease forwards;
+      }
+      .animation {
+        animation: fadeInLeft 2s ease forwards;
+      }
+    }
+  }
+}
+
+
+
+// Media Query
+@media (max-width: 992px) {
+  #home {
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  #home {
+    .container {
+      .row {
+        .col-12 {
+          text-align: center;
+          .first-p {
+            font-size: 15px;
+          }
+          h1 {
+            font-size: 30px;
+            span {
+              font-size: 31.5px;
+            }
+          }
+          .end-p {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animation
+
+@keyframes wobbie {
+  0% {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate(-5deg) scale(1.1);
+    transform: translate3d(-30%, 0, 0) rotate(-10deg) scale(1.1);
+  }
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate(3deg) scale(1.2);
+    transform: translate3d(20%, 0, 0) rotate(3deg) scale(1.2);
+  }
+  45% {
+    -webkit-transform: translate3d(-20%, 0, 0) rotate(-3deg) scale(1.3);
+    transform: translate3d(-20%, 0, 0) rotate(-3deg) scale(1.3);
+  }
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate(2deg) scale(1.2);
+    transform: translate3d(10%, 0, 0) rotate(2deg) scale(1.2);
+  }
+  75% {
+    -webkit-transform: translate3d(-10%, 0, 0) rotate(-1deg) scale(1.1);
+    transform: translate3d(-10%, 0, 0) rotate(-1deg) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+}

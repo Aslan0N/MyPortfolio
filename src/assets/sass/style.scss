@@ -1,0 +1,43 @@
+@import "./components/header";
+@import "./components/home";
+@import "./components/tooling";
+@import "./components/showroom";
+@import "./components/quote";
+@import "./components/contact";
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+html {
+  cursor: url("../images/cursor.svg") 15 15, move;
+  ::selection{
+    background-color: #14e956;
+    color: #fff;
+  }
+}
+a{
+  text-decoration: none !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #14e956;
+}
+
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e8fdee;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #14e956;
+  border-radius: 20px;
+  border: 2px solid #fdfdfd;
+}
