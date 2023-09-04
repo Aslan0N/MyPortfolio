@@ -1,10 +1,12 @@
+import Aos from "aos";
 import React from "react";
 import { LuQuote } from "react-icons/lu";
 
 const QuoteBody = () => {
+  Aos.init();
   return (
     <section id="quote">
-      <div className="my-card">
+      <div data-aos="zoom-in" className="my-card">
         <span className="first-sp">
           <LuQuote className="i" />
         </span>

@@ -15,13 +15,11 @@
     padding: 1rem 1.8rem;
     background-color: #12141d;
     border: 0.5px solid #14e956;
-    animation: flip 2s ease forwards;
     box-shadow: inset 0 0 4px 1px #14e956;
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
       -1px 1px 0 #000, 1px 1px 0 #000;
   }
   .con {
-    animation: showing 2s ease forwards;
     justify-content: space-between;
     background-color: #0c8c34;
     padding: 0.8rem 1rem;

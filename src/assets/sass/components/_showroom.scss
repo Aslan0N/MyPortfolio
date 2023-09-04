@@ -15,7 +15,6 @@
     margin: 20px 0;
     background-color: #12141d;
     border: 0.5px solid #14e956;
-    animation: flip 2s ease forwards;
     box-shadow: inset 0 0 4px 1px #14e956;
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
       -1px 1px 0 #000, 1px 1px 0 #000;
@@ -24,13 +23,14 @@
     width: 100%;
     height: 100%;
     margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     .my-slide {
       display: flex;
       align-items: center;
       width: 100% !important;
+      height: 60%;
       justify-content: center;
       .my-card {
         width: 55%;
@@ -39,11 +39,19 @@
         border-radius: 16px;
         border: 1px solid #222;
         .item {
-          width: 100%;
           height: 55%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
           img {
             width: 100%;
             height: 100%;
+          }
+          .img {
+            width: 60%;
+            height: 60%;
           }
         }
         .content {
@@ -106,6 +114,8 @@
 // Media Query
 @media (max-width: 800px) {
   #show-room {
+    height: auto;
+    padding-top: 40px;
     .mySwiper {
       .my-slide {
         .my-card {

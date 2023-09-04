@@ -10,8 +10,8 @@
         text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
         transform: rotate(4deg);
         color: #14e956;
-        margin-top: 30px;
         font-weight: 900;
+        margin: 30px;
         width: auto;
         opacity: .9;
     }
@@ -79,5 +79,10 @@
                 }
             }
         }
+    }
+}
+@media (max-width:800px){
+    #contact{
+        height: auto;
     }
 }

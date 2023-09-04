@@ -66,48 +66,6 @@ header .close-bars .three {
   justify-content: center;
   background: url("../images/home.svg") center/cover no-repeat;
 }
-#home .owerlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -3;
-  width: 100%;
-  height: 100%;
-  background-color: #1e2128;
-}
-#home .owerlay ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-#home .owerlay ul li {
-  width: 30%;
-  text-align: end;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#home .owerlay ul li span {
-  margin-right: 30px;
-  color: #14e956;
-  font-size: 70px;
-  opacity: 0;
-}
-#home .owerlay ul li:hover span {
-  opacity: 1;
-}
-#home .owerlay ul li a {
-  color: #14e956;
-  text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
-  font-size: 60px;
-  font-weight: 900;
-}
-#home .visible {
-  z-index: 999 !important;
-}
 #home::after {
   background-color: rgba(0, 0, 0, 0.482);
   position: absolute;
@@ -172,6 +130,12 @@ header .close-bars .three {
   }
 }
 @media (max-width: 768px) {
+  #home .owerlay ul li span {
+    font-size: 50px;
+  }
+  #home .owerlay ul li a {
+    font-size: 40px;
+  }
   #home .container .row .col-12 {
     text-align: center;
   }
@@ -231,6 +195,51 @@ header .close-bars .three {
     transform: translate3d(0 0 0);
   }
 }
+.owerlay {
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  z-index: -3;
+  width: 100%;
+  height: 88vh;
+  background-color: #1e2128;
+}
+.owerlay ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.owerlay ul li {
+  width: 30%;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.owerlay ul li span {
+  margin-right: 30px;
+  color: #14e956;
+  font-size: 70px;
+  opacity: 0;
+}
+.owerlay ul li:hover span {
+  opacity: 1;
+}
+.owerlay ul li a {
+  color: #14e956;
+  text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.visible {
+  z-index: 99999 !important;
+}
+
 #tooling {
   width: 100%;
   height: auto;
@@ -249,12 +258,10 @@ header .close-bars .three {
   padding: 1rem 1.8rem;
   background-color: #12141d;
   border: 0.5px solid #14e956;
-  animation: flip 2s ease forwards;
   box-shadow: inset 0 0 4px 1px #14e956;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 #tooling .con {
-  animation: showing 2s ease forwards;
   justify-content: space-between;
   background-color: #0c8c34;
   padding: 0.8rem 1rem;
@@ -366,7 +373,6 @@ header .close-bars .three {
   margin: 20px 0;
   background-color: #12141d;
   border: 0.5px solid #14e956;
-  animation: flip 2s ease forwards;
   box-shadow: inset 0 0 4px 1px #14e956;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -374,14 +380,15 @@ header .close-bars .three {
   width: 100%;
   height: 100%;
   margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 #show-room .mySwiper .my-slide {
   display: flex;
   align-items: center;
   width: 100% !important;
+  height: 60%;
   justify-content: center;
 }
 #show-room .mySwiper .my-slide .my-card {
@@ -392,12 +399,20 @@ header .close-bars .three {
   border: 1px solid #222;
 }
 #show-room .mySwiper .my-slide .my-card .item {
-  width: 100%;
   height: 55%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 #show-room .mySwiper .my-slide .my-card .item img {
   width: 100%;
   height: 100%;
+}
+#show-room .mySwiper .my-slide .my-card .item .img {
+  width: 60%;
+  height: 60%;
 }
 #show-room .mySwiper .my-slide .my-card .content {
   background-color: #fff;
@@ -447,22 +462,24 @@ header .close-bars .three {
 }
 
 @media (max-width: 800px) {
+  #show-room {
+    height: auto;
+    padding-top: 40px;
+  }
   #show-room .mySwiper .my-slide .my-card {
     width: 70%;
   }
 }
 #quote {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
-  padding: 140px 0;
   align-items: center;
   justify-content: center;
   background-color: #050810;
 }
 #quote .my-card {
   background-image: url("https://www.onyedika.xyz/static/media/quote.c952ddc0c1361baa3c77.png");
-  animation: zooming 2s forwards;
   background-color: transparent;
   background-repeat: no-repeat;
   border: 3px solid #14e956;
@@ -506,11 +523,17 @@ header .close-bars .three {
 }
 
 @media (max-width: 990px) {
+  #quote {
+    height: 80vh;
+  }
   #quote .my-card h5 {
     font-size: 25px;
   }
 }
 @media (max-width: 768px) {
+  #quote {
+    height: 50vh;
+  }
   #quote .my-card h5 {
     font-size: 20px;
   }
@@ -558,8 +581,8 @@ header .close-bars .three {
   text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
   transform: rotate(4deg);
   color: #14e956;
-  margin-top: 30px;
   font-weight: 900;
+  margin: 30px;
   width: auto;
   opacity: 0.9;
 }
@@ -621,6 +644,11 @@ header .close-bars .three {
   font-size: 40px;
 }
 
+@media (max-width: 800px) {
+  #contact {
+    height: auto;
+  }
+}
 body,
 * {
   margin: 0;

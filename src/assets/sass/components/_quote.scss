@@ -1,114 +1,114 @@
-#quote{
-    width: 100%;
-    height: auto;
-    display: flex;
-    padding: 140px 0;
-    align-items: center;
+#quote {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050810;
+  .my-card {
+    background-image: url("https://www.onyedika.xyz/static/media/quote.c952ddc0c1361baa3c77.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 3px solid #14e956;
+    background-position: center;
     justify-content: center;
-    background-color: #050810;
-    .my-card{
-        background-image: url('https://www.onyedika.xyz/static/media/quote.c952ddc0c1361baa3c77.png');
-        animation: zooming 2s forwards;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        border: 3px solid #14e956;
-        background-position: center;
-        justify-content: center;
-        background-size: cover;
-        padding: 2.4rem 1.4rem;
-        align-items: center;
-        border-radius: 12px;
-        position: relative;
-        display: flex;
-        height: auto;
-        width: 60%;
-        .first-sp{
-            display: inline-block;
-            .i{
-                right: 50px;
-                bottom: -40px;
-                font-size: 80px;
-                color: #14e956;
-                position: absolute;
-            }
-        }
-        .end-sp{
-            display: inline-block;
-            .i{
-                left: 50px;
-                top: -40px;
-                font-size: 80px;
-                color: #14e956;
-                position: absolute;
-                transform: rotate(180deg);
-            }
-        }
-        h5{
-            width: 60%;
-            color: #fff;
-            font-size: 32px;
-            font-weight: 900;
-        }
+    background-size: cover;
+    padding: 2.4rem 1.4rem;
+    align-items: center;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 60%;
+    .first-sp {
+      display: inline-block;
+      .i {
+        right: 50px;
+        bottom: -40px;
+        font-size: 80px;
+        color: #14e956;
+        position: absolute;
+      }
     }
+    .end-sp {
+      display: inline-block;
+      .i {
+        left: 50px;
+        top: -40px;
+        font-size: 80px;
+        color: #14e956;
+        position: absolute;
+        transform: rotate(180deg);
+      }
+    }
+    h5 {
+      width: 60%;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 900;
+    }
+  }
 }
 
 // Media Query
-@media (max-width:990px){
-    #quote{
-        .my-card{
-            h5{
-                font-size: 25px;
-            }
-        }
+@media (max-width: 990px) {
+  #quote {
+    height: 80vh;
+    .my-card {
+      h5 {
+        font-size: 25px;
+      }
     }
+  }
 }
-@media (max-width:768px){
-    #quote{
-        .my-card{
-            h5{
-                font-size: 20px;
-            }
-            span{
-                .i{
-                    font-size: 50px !important;
-                }
-            }
-            .first-sp{
-                .i{
-                    bottom: -25px;
-                    right: 20px;
-                }
-            }
-            .end-sp{
-                .i{
-                    top: -25px;
-                    left: 20px;
-                }
-            }
+@media (max-width: 768px) {
+  #quote {
+    height: 50vh;
+    .my-card {
+      h5 {
+        font-size: 20px;
+      }
+      span {
+        .i {
+          font-size: 50px !important;
         }
+      }
+      .first-sp {
+        .i {
+          bottom: -25px;
+          right: 20px;
+        }
+      }
+      .end-sp {
+        .i {
+          top: -25px;
+          left: 20px;
+        }
+      }
     }
+  }
 }
-@media (max-width:576px){
-    #quote{
-        .my-card{
-            width: 70%;
-            h5{
-                width: 90%;
-                font-size: 16px;
-            }
-        }
+@media (max-width: 576px) {
+  #quote {
+    .my-card {
+      width: 70%;
+      h5 {
+        width: 90%;
+        font-size: 16px;
+      }
     }
+  }
 }
 
 // Animation
 
 @keyframes zooming {
-    0%{
-        opacity: 0;
-        transform: scale(.3);
-    }
-    50%{
-        opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

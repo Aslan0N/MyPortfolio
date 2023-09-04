@@ -7,51 +7,7 @@
   align-items: center;
   justify-content: center;
   background: url("../images/home.svg") center/cover no-repeat;
-  .owerlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -3;
-    width: 100%;
-    height: 100%;
-    background-color: #1e2128;
-    ul{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      li{
-        width: 30%;
-        text-align: end;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        span{
-          margin-right: 30px;
-          color: #14e956;
-          font-size: 70px;
-          opacity: 0;
-        }
-        &:hover{
-          span{
-            opacity: 1;
-          }
-        }
-        a{
-          color: #14e956;
-          text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
-          font-size: 60px;
-          font-weight: 900;
-        }
-      }
-      
-    }
-  }
-  .visible{
-    z-index: 999 !important;
-  }
+  
   &::after {
     background-color: rgba(0, 0, 0, 0.482);
     position: absolute;
@@ -126,6 +82,18 @@
 }
 @media (max-width: 768px) {
   #home {
+    .owerlay{
+      ul{
+        li{
+          span{
+            font-size: 50px;
+          }
+          a{
+            font-size: 40px;
+          }
+        }
+      }
+    }
     .container {
       .row {
         .col-12 {
@@ -201,4 +169,53 @@
     opacity: 1;
     transform: translate3d(0 0 0);
   }
+}
+
+// Owerlay
+
+.owerlay{
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  z-index: -3;
+  width: 100%;
+  height: 88vh;
+  background-color: #1e2128;
+  ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    li{
+      width: 30%;
+      text-align: end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span{
+        margin-right: 30px;
+        color: #14e956;
+        font-size: 70px;
+        opacity: 0;
+      }
+      &:hover{
+        span{
+          opacity: 1;
+        }
+      }
+      a{
+        color: #14e956;
+        text-shadow: 3px 3px 0 #34473c, -1px -1px 0 #085c23, 1px -1px 0 #243e2e, -1px 1px 0 #0f1210, 1px 1px 0 #14e956;
+        font-size: 50px;
+        font-weight: 900;
+      }
+    }
+    
+  }
+}
+.visible{
+  z-index: 99999 !important;
 }
