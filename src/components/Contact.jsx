@@ -1,8 +1,13 @@
-import Aos from "aos";
+// React
 import React from "react";
+
+// İcons
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { TbMailShare } from "react-icons/tb";
+
+// Aos
+import Aos from "aos";
 
 const Contact = () => {
   Aos.init();

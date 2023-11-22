@@ -1,11 +1,18 @@
+// React
 import React from "react";
+
+// Süiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+
+// İmages
 import ProjectImg1 from "../assets/images/bigboom.avif";
 import ProjectImg2 from "../assets/images/cooltown.jpg";
 import ProjectImg3 from "../assets/images/Tictactoe.webp";
+
+// Aos
 import Aos from "aos";
 
 const ShowRoom = () => {

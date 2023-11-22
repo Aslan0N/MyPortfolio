@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+// React
+import React from "react";
+
+// İmage
 import Img1 from "../assets/images/img-me.png";
 
 const Home = () => {

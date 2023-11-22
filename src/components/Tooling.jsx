@@ -1,4 +1,7 @@
+// React
 import React from "react";
+
+// İcons
 import { FaReact } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
@@ -9,6 +12,8 @@ import { SiJquery } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { AiFillHtml5 } from "react-icons/ai";
+
+// Aos
 import Aos from "aos";
 
 const Tooling = () => {

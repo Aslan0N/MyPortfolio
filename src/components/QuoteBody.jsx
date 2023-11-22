@@ -1,6 +1,11 @@
-import Aos from "aos";
+// React
 import React from "react";
+
+// İcons
 import { LuQuote } from "react-icons/lu";
+
+// Aos
+import Aos from "aos";
 
 const QuoteBody = () => {
   Aos.init();

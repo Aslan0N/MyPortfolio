@@ -1,4 +1,7 @@
+// React
 import React, { useState } from "react";
+
+// Logo İmage
 import LogoImg from "../assets/images/logo.svg";
 
 const Header = ({ visible, setVisible }) => {
